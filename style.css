@@ -1,0 +1,168 @@
+/* Regole Generali */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: grey;
+}
+/* Fine Regola Generali */
+
+
+/* Inizio Navbar */
+nav {
+    width: 100vw;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+nav > * {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+}
+
+nav li {
+    list-style: none;
+    padding: 0 15px;
+}
+
+.nav-left ul, .nav-right ul {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 6.5rem;
+}
+
+.dropdown-global, .mobile-drop-content {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    background-color: white;
+    width:150px;
+    box-shadow: -8px 7px 9px 10px grey;
+}
+
+.dropdown-content > ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.dropdown-content li {
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-content ul li:hover{
+    background-color: rgba(194, 193, 193, 0.6);
+    cursor: pointer;
+    color: black;
+}
+
+    /* Testo speciale NEW del menu */
+special-text {
+    position: relative;
+    font-size: 75%;
+    font-weight: bold;
+    color: rgb(235, 0, 141);
+    top: -.5em;
+}
+    /* Fine Testo Speciale */
+
+    /* Bottone App */
+.custom-button {
+    color: #fff;
+    background-color: rgb(235, 0, 141);
+    border-radius: 2em;
+    padding: 0.625em 1.5em;
+    line-height: 1.5em;
+    font-size: 1rem;
+    transition: all 0.2s ease 0s;
+    cursor: pointer;
+}
+    /* Fine Bottone App */
+
+/* Fine Navbar */
+
+/* Imposto la classe da aggiungere per visualizzare gli elementi */
+.active {
+    display: block!important;
+}
+
+/* Nascondo la nav mobile da desktop */
+.mobile-nav, .mobile-drop-content{
+    display: none;
+}
+
+
+@media (max-width: 1020px){
+
+    /* Nascondo Navbar desktop da Mobile */
+    .nav-left, .nav-right {
+        display: none;
+    }
+
+    /* Inizio Navbar Mobile */
+    .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 50px;
+    }
+    .logo-mobile {
+        width: 6.5rem;
+        display: flex;
+    }
+
+    .mobile-content {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: auto;
+        background-color: white;
+        padding: 35px;
+    }
+
+    .mobile-content > ul {
+        flex-flow: column;
+    }
+
+    .mobile-content > ul > li {
+        margin-bottom: 20px;
+    }
+
+    .close {
+        float: right;
+    }
+
+    .mobile-drop-content > ul > li {
+        padding: 10px 0px;
+    }
+
+    .mobile-drop > span > i {
+        float: right;
+    }
+    /* Fine Navbar Mobile */
+}
